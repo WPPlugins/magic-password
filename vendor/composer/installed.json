@@ -1,0 +1,274 @@
+[
+    {
+        "name": "twig/twig",
+        "version": "v1.33.2",
+        "version_normalized": "1.33.2.0",
+        "source": {
+            "type": "git",
+            "url": "https://github.com/twigphp/Twig.git",
+            "reference": "dd6ca96227917e1e85b41c7c3cc6507b411e0927"
+        },
+        "dist": {
+            "type": "zip",
+            "url": "https://api.github.com/repos/twigphp/Twig/zipball/dd6ca96227917e1e85b41c7c3cc6507b411e0927",
+            "reference": "dd6ca96227917e1e85b41c7c3cc6507b411e0927",
+            "shasum": ""
+        },
+        "require": {
+            "php": ">=5.2.7"
+        },
+        "require-dev": {
+            "psr/container": "^1.0",
+            "symfony/debug": "~2.7",
+            "symfony/phpunit-bridge": "~3.3@dev"
+        },
+        "time": "2017-04-20T17:39:48+00:00",
+        "type": "library",
+        "extra": {
+            "branch-alias": {
+                "dev-master": "1.33-dev"
+            }
+        },
+        "installation-source": "dist",
+        "autoload": {
+            "psr-0": {
+                "Twig_": "lib/"
+            }
+        },
+        "notification-url": "https://packagist.org/downloads/",
+        "license": [
+            "BSD-3-Clause"
+        ],
+        "authors": [
+            {
+                "name": "Fabien Potencier",
+                "email": "fabien@symfony.com",
+                "homepage": "http://fabien.potencier.org",
+                "role": "Lead Developer"
+            },
+            {
+                "name": "Armin Ronacher",
+                "email": "armin.ronacher@active-4.com",
+                "role": "Project Founder"
+            },
+            {
+                "name": "Twig Team",
+                "homepage": "http://twig.sensiolabs.org/contributors",
+                "role": "Contributors"
+            }
+        ],
+        "description": "Twig, the flexible, fast, and secure template language for PHP",
+        "homepage": "http://twig.sensiolabs.org",
+        "keywords": [
+            "templating"
+        ]
+    },
+    {
+        "name": "twofas/encryption",
+        "version": "v1.2",
+        "version_normalized": "1.2.0.0",
+        "source": {
+            "type": "git",
+            "url": "git@github.com:twofas/encryption.git",
+            "reference": "0574c2843d4d3fb61a8e94ff78e710d7aa66a2cd"
+        },
+        "dist": {
+            "type": "zip",
+            "url": "https://api.github.com/repos/twofas/encryption/zipball/0574c2843d4d3fb61a8e94ff78e710d7aa66a2cd",
+            "reference": "0574c2843d4d3fb61a8e94ff78e710d7aa66a2cd",
+            "shasum": ""
+        },
+        "require": {
+            "php": ">=5.3.0"
+        },
+        "require-dev": {
+            "phpunit/phpunit": "4.5.0"
+        },
+        "time": "2017-05-15T12:54:35+00:00",
+        "type": "library",
+        "installation-source": "dist",
+        "autoload": {
+            "psr-4": {
+                "TwoFAS\\Encryption\\": [
+                    "src/",
+                    "tests/"
+                ]
+            }
+        },
+        "license": [
+            "MIT"
+        ],
+        "authors": [
+            {
+                "name": "WJanusz",
+                "email": "w.janusz@2fas.com"
+            },
+            {
+                "name": "Krystian Dąbek",
+                "email": "k.dabek@2fas.com"
+            }
+        ],
+        "description": "Encryption for TwoFAS data.",
+        "support": {
+            "source": "https://github.com/twofas/encryption/tree/v1.2",
+            "issues": "https://github.com/twofas/encryption/issues"
+        }
+    },
+    {
+        "name": "endroid/qrcode",
+        "version": "1.6.6",
+        "version_normalized": "1.6.6.0",
+        "source": {
+            "type": "git",
+            "url": "https://github.com/endroid/QrCode.git",
+            "reference": "cef5d5b7b904d7bb0708eb744c35316364b65fa0"
+        },
+        "dist": {
+            "type": "zip",
+            "url": "https://api.github.com/repos/endroid/QrCode/zipball/cef5d5b7b904d7bb0708eb744c35316364b65fa0",
+            "reference": "cef5d5b7b904d7bb0708eb744c35316364b65fa0",
+            "shasum": ""
+        },
+        "require": {
+            "ext-gd": "*",
+            "php": ">=5.3.0"
+        },
+        "time": "2016-05-29T07:37:18+00:00",
+        "type": "library",
+        "extra": {
+            "branch-alias": {
+                "dev-master": "1.x-dev"
+            }
+        },
+        "installation-source": "dist",
+        "autoload": {
+            "psr-4": {
+                "Endroid\\QrCode\\": "src/"
+            }
+        },
+        "notification-url": "https://packagist.org/downloads/",
+        "license": [
+            "MIT"
+        ],
+        "authors": [
+            {
+                "name": "Jeroen van den Enden",
+                "email": "info@endroid.nl",
+                "homepage": "http://endroid.nl/"
+            }
+        ],
+        "description": "Endroid QR Code",
+        "homepage": "https://github.com/endroid/QrCode",
+        "keywords": [
+            "code",
+            "endroid",
+            "qr",
+            "qrcode"
+        ]
+    },
+    {
+        "name": "twofas/sdk",
+        "version": "v2.0.7",
+        "version_normalized": "2.0.7.0",
+        "source": {
+            "type": "git",
+            "url": "git@github.com:twofas/sdk.git",
+            "reference": "5c512686b4561739186d17ccb2ee671ccb50d84b"
+        },
+        "dist": {
+            "type": "zip",
+            "url": "https://api.github.com/repos/twofas/sdk/zipball/5c512686b4561739186d17ccb2ee671ccb50d84b",
+            "reference": "5c512686b4561739186d17ccb2ee671ccb50d84b",
+            "shasum": ""
+        },
+        "require": {
+            "endroid/qrcode": "~1.6.0",
+            "ext-curl": "*",
+            "twofas/encryption": "~1.0"
+        },
+        "require-dev": {
+            "phpunit/phpunit": "4.5.0"
+        },
+        "time": "2017-05-19T09:11:18+00:00",
+        "type": "library",
+        "installation-source": "dist",
+        "autoload": {
+            "psr-4": {
+                "TwoFAS\\": "TwoFAS/"
+            }
+        },
+        "autoload-dev": {
+            "classmap": [
+                "tests/"
+            ]
+        },
+        "license": [
+            "MIT"
+        ],
+        "authors": [
+            {
+                "name": "Michał",
+                "email": "m.wezowski@2fas.com"
+            }
+        ],
+        "description": "sdk",
+        "support": {
+            "source": "https://github.com/twofas/sdk/tree/v2.0.7",
+            "issues": "https://github.com/twofas/sdk/issues"
+        }
+    },
+    {
+        "name": "twofas/userzone-sdk",
+        "version": "v2.0.5",
+        "version_normalized": "2.0.5.0",
+        "source": {
+            "type": "git",
+            "url": "git@github.com:twofas/userzone-sdk.git",
+            "reference": "3a4cdb82bff50795227cb32c417e25be157c6323"
+        },
+        "dist": {
+            "type": "zip",
+            "url": "https://api.github.com/repos/twofas/userzone-sdk/zipball/3a4cdb82bff50795227cb32c417e25be157c6323",
+            "reference": "3a4cdb82bff50795227cb32c417e25be157c6323",
+            "shasum": ""
+        },
+        "require": {
+            "ext-curl": "*",
+            "php": ">=5.3.0"
+        },
+        "require-dev": {
+            "phpunit/phpunit": "4.5.0"
+        },
+        "time": "2017-05-19T11:09:43+00:00",
+        "type": "library",
+        "installation-source": "dist",
+        "autoload": {
+            "psr-4": {
+                "TwoFAS\\UserZone\\": "TwoFAS/UserZone/"
+            }
+        },
+        "autoload-dev": {
+            "classmap": [
+                "tests/TwoFAS/Storage/ArrayStorage.php",
+                "tests/TwoFAS/Storage/FilledStorage.php",
+                "tests/TwoFAS/Storage/RandomStorage.php",
+                "tests/TwoFAS/Storage/RevokedStorage.php",
+                "tests/TwoFAS/UserZone/UserZoneBase.php"
+            ]
+        },
+        "license": [
+            "MIT"
+        ],
+        "authors": [
+            {
+                "name": "Two Factor Authentication Service Inc.",
+                "email": "example@2fas.com"
+            }
+        ],
+        "description": "userzone-sdk",
+        "support": {
+            "source": "https://github.com/twofas/userzone-sdk/tree/v2.0.5",
+            "issues": "https://github.com/twofas/userzone-sdk/issues"
+        }
+    }
+]

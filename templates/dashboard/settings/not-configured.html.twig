@@ -1,0 +1,66 @@
+{% extends "dashboard/settings/settings.html.twig" %}
+
+{% block content %}
+    <h1 class="text-center">Magic Password</h1>
+    <h3 class="text-center">2 simple steps to activate passwordless authentication:</h3>
+
+    <div class="content">
+        <div class="mf-step">
+            <div class="mf-step-left">
+                <img src="{{ assets_url }}images/get-app.png" alt="Get Magic Password App">
+            </div>
+            <div class="mf-step-right">
+                <div class="mf-step-right-content">
+                    <p class="step muted">Step 1</p>
+                    <h4>Get the App</h4>
+                    <p class="step-desc">Download Magic Password app from<br>Google Play or App Store</p>
+
+                    <div class="stores_download">
+                        <a href="https://play.google.com/store/apps/details?id=io.magicpassword" target="_blank"><i class="icon icon-google-play"></i></a>
+                        <a href="https://itunes.apple.com/us/app/magic-password-forget-your-password/id1240404220?mt=8" target="_blank"><i class="icon icon-app-store"></i></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="mf-step">
+            <div class="mf-step-left">
+                <div class="qr-code-wrapper">
+                    <img src="{{ qr_code }}" alt="Magic Code" />
+                </div>
+            </div>
+            <div class="mf-step-right">
+                <div class="mf-step-right-content">
+                    <p class="step muted">Step 2</p>
+                    <h4>Scan Magic Code</h4>
+                    <p class="step-desc">Please scan the following<br>Magic Code with your app</p>
+
+                    {% include 'dashboard/settings/pair-form.html.twig' %}
+                </div>
+
+                <div class="mf-step-right-bottom">
+                    <a href="#" class="scanning-tips js-open-tips">
+                        <i class="icon icon-scanning-tips"></i>
+                        <span>HOW DO I SCAN A MAGIC CODE?</span>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="mf-modal-backdrop success-modal">
+        <div class="mf-modal-backdrop-content">
+            <div class="mf-modal" tabindex="-1">
+                <div class="mf-modal-content text-center">
+                    <i class="icon icon-tick"></i>
+                    <h6>Success!</h6>
+                    <p class="info-paragraph">Your smartphone has been paired with this WordPress account</p>
+                    <input type="button" class="js-success-modal-continue mf-btn action" value="Continue" />
+                </div>
+            </div>
+        </div>
+    </div>
+
+    {% include 'subscription-error-modal.html.twig' %}
+    {% include 'dashboard/pair-error-modal.html.twig' %}
+{% endblock %}

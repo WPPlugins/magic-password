@@ -1,0 +1,219 @@
+@import '../includes/variables';
+@import '../includes/mixins';
+
+&-modal {
+  display: inline-block;
+  border-radius: 4px;
+  background: $MF_Modal_BackgroundColor;
+  padding: 40px 90px;
+  outline: 0;
+  transition: all 1s linear;
+
+  @media all and (max-width: $screen-md-max) {
+    position: static;
+    top: auto;
+    left: auto;
+    transform: none;
+    margin: 50px auto;
+    display: block;
+    width: 95%;
+    max-width: 500px;
+    padding: 40px;
+  }
+
+  @media all and (max-width: $screen-sm-max) {
+    padding: 30px;
+  }
+
+  .scanning-tips-modal & {
+    position: relative;
+  }
+
+  &-backdrop {
+    display: none;
+    position: fixed;
+    left: 0;
+    top: 0;
+    z-index: 999999;
+    width: 100%;
+    height: 100%;
+    background: $MF_Modal_Backdrop_BackgroundColor;
+    box-sizing: border-box;
+    opacity: 0;
+
+    > * {
+      display: table-cell;
+    }
+
+    @media all and (max-width: $screen-md-max) {
+      overflow: scroll;
+      > * {
+        display: inline-block;
+      }
+    }
+
+    &.mf-modal-show {
+      display: table;
+      @media all and (max-width: $screen-md-max) {
+        display: block;
+      }
+    }
+
+    &-content {
+      vertical-align: middle;
+      text-align: center;
+      position: relative;
+      left: 0;
+      top: 0;
+      width: 100%;
+      height: 100%;
+
+      @media all and (max-width: $screen-md-max) {
+        height: auto;
+        left: auto;
+        overflow: visible;
+        top: auto;
+      }
+    }
+
+    * {
+      -moz-box-sizing: border-box;
+      box-sizing: border-box;
+      outline: none;
+    }
+  }
+
+  &-content {
+    width: auto;
+    height: auto;
+    position: relative;
+
+    .icon-error {
+      margin: 0 auto 45px auto;
+    }
+  }
+
+  &-steps-container {
+    height: auto;
+    overflow: hidden;
+    text-align: center;
+  }
+
+  &-step {
+    display: block;
+    float: left;
+    margin-right: 50px;
+
+    @media all and (max-width: $screen-md-max) {
+      float: none;
+      margin-right: 0;
+      margin-bottom: 30px;
+    }
+
+    &:last-of-type {
+      margin-right: 0;
+      margin-bottom: 0;
+    }
+
+    p {
+      &.step {
+        font-size: 12px;
+        font-weight: 700;
+        margin-bottom: 15px;
+      }
+
+      &.step-desc {
+        font-weight: 400;
+        font-size: 14px;
+        margin-top: 15px;
+      }
+    }
+  }
+
+  .icon-tick {
+    display: inline-block;
+    margin-bottom: 10px;
+  }
+
+  h2 {
+    font-weight: 300;
+    font-size: 33px;
+    text-align: center;
+    margin-bottom: 55px;
+
+    @media all and (max-width: $screen-sm-max) {
+      line-height: 28px;
+      font-size: 24px;
+      margin-bottom: 30px;
+    }
+  }
+
+  h6 {
+    font-size: 14px;
+    font-weight: 700;
+    margin-bottom: 50px;
+
+    @media all and (max-width: $screen-sm-max) {
+      text-align: center;
+      margin-bottom: 25px;
+    }
+  }
+
+  p {
+    &.info-paragraph {
+      max-width: 310px;
+      font-size: 18px;
+      line-height: 30px;
+      margin: 0 auto 60px auto;
+
+      @media all and (max-width: $screen-sm-max) {
+        text-align: center;
+        margin: 0 auto 30px auto;
+      }
+    }
+  }
+}
+
+@at-root .delete-modal {
+  .mf-modal {
+    padding: 40px;
+
+    .icon-delete-exclamation-mark {
+      position: absolute;
+      left: 50%;
+      top: -53px;
+      margin-left: -13px;
+      z-index: 2;
+    }
+
+    .confirm-buttons {
+      height: auto;
+      overflow: hidden;
+      margin-top: 40px;
+      text-align: center;
+
+      a {
+        display: inline-block;
+        line-height: 30px;
+        font-size: 15px;
+        font-weight: 700;
+        letter-spacing: .25px;
+      }
+    }
+
+    h6 {
+      font-size: 18px;
+      line-height: 22px;
+      font-weight: 700;
+      margin-bottom: 20px;
+    }
+
+    p {
+      &.info-paragraph {
+        font-size: 14px;
+        line-height: 22px;
+        max-width: 320px;
+      }
+    }
+  }
+}

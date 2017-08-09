@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<phpunit backupGlobals="false"
+         backupStaticAttributes="false"
+         bootstrap="bootstrap.php"
+         colors="true"
+         convertErrorsToExceptions="true"
+         convertNoticesToExceptions="true"
+         convertWarningsToExceptions="true"
+         processIsolation="false"
+         stopOnFailure="false">
+    <testsuites>
+        <testsuite name="Application Test Suite">
+            <directory>./tests/</directory>
+        </testsuite>
+    </testsuites>
+    <filter>
+        <whitelist>
+            <directory suffix=".php">app/</directory>
+        </whitelist>
+    </filter>
+    <php>
+        <env name="env" value="review"/>
+        <env name="base_url" value="http://userzoneserver.app"/>
+        <env name="client_id" value="10"/>
+        <env name="client_email" value="sdk@2fas.com"/>
+        <env name="client_password" value="sdk_password"/>
+        <env name="integration_id" value="11"/>
+        <env name="card_id" value="58e248e44dccc"/>
+        <env name="second_client_id" value="20"/>
+        <env name="second_client_email" value="sdk-second@2fas.com"/>
+        <env name="second_client_password" value="sdk_password"/>
+        <env name="second_integration_id" value="12"/>
+        <env name="oauth_wordpress_token" value="eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiIsImp0aSI6IjgxNDUyYjA5MTcyZTZmODExMDI1YmFhZGEwMzNlZDYzNTlhZjNjYzZjN2U1ODBmZjM4ZDdlOTZmYWZlNGFmNDRlNTRhOTZkYjEzMmU0MzViIn0.eyJhdWQiOiIxIiwianRpIjoiODE0NTJiMDkxNzJlNmY4MTEwMjViYWFkYTAzM2VkNjM1OWFmM2NjNmM3ZTU4MGZmMzhkN2U5NmZhZmU0YWY0NGU1NGE5NmRiMTMyZTQzNWIiLCJpYXQiOjE0ODE3OTgxMzksIm5iZiI6MTQ4MTc5ODEzOSwiZXhwIjo0NjM3NDcxNzM5LCJzdWIiOiIxMCIsInNjb3BlcyI6WyJ3b3JkcHJlc3MiXX0.ZxLvEtEhwyELjLLAN0Xm3XWapQzMWKHOR_Bj4xBq3u10mGH9jdD4tJK-4yJfdIv0cgGGOSmdSpvLduG9EJD9rprZygCnqshMbK1wiqxwALJpzbXRSVPNwB7xuitUpzvivAO-qIW5e-252yJPlCuvIfaPCV3VTc7q2scqWvgWBXQtImS7IEFHb3Rg7R5ovhXv-1bL5F5StHcyHM1Ox5iFA3ZcV7SO7ZEyaDQeAGBtxBFMqNDShsSeXVXlOGGgWrYUAOlPE-egb-5VaVP2XOqFBD1RpELBjgkBnH4okLT7P3f2KefB0Vy5mQRUgG4zNcwKZdNGJ6zICzYR3lXZBSxNc2YSBndn3LaZVKk2TGOV0Jk_XFGOavyhaFlU3IV2Gce8Wg1Cp_L-zrPZe2-OjK0ru-YAYF4JTjZigzIg63jUj33DXI3ZmKvUPpqAe7IOoioo6ZryoGG7ldukdGog42lISTRT4aQEg7vXkHYyxQSnKPO5CZsyEQ2yIxVRXw-rKeyBD1dolNvY1yuwggsbS9w3lzNx8EeyyvYeeG89jMZtcgluG5k--ojbKOeqXu_DBJufDXL3h0vULq44PlA9FgKE9cgCfLC3vqtdTewERX-XTD7SIJ5U3cO8BdW3BBIM-6hpDyqxPtGiy_R3J1KwpeO_6J60Eoip1C9i-SgLJ15x2Ko"/>
+        <env name="oauth_second_wordpress_token" value="eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiIsImp0aSI6IjY3NGE4MGJhM2UxOTBhNjUyMGJhMGJlYzYwZWIxNzM4NTQ0NWZmZjQ3YTAyOTI1ZTdiNzRmYjNjNWYxZDMyNGM3NDMyMDcxYWRhNGFkN2JmIn0.eyJhdWQiOiIxIiwianRpIjoiNjc0YTgwYmEzZTE5MGE2NTIwYmEwYmVjNjBlYjE3Mzg1NDQ1ZmZmNDdhMDI5MjVlN2I3NGZiM2M1ZjFkMzI0Yzc0MzIwNzFhZGE0YWQ3YmYiLCJpYXQiOjE0OTEyOTk4NDgsIm5iZiI6MTQ5MTI5OTg0OCwiZXhwIjo0NjQ2OTczNDQ4LCJzdWIiOiIyMCIsInNjb3BlcyI6WyJ3b3JkcHJlc3MiXX0.Q5JxGrGoyFoLU5h60aCDEv8E46QayEsFcTsE3EBF5O6BNq6FOb-uCpv_oTSR-zdbowk5Lf5b8hiaYw5Y4kgqJQBKlzfjzl1cfJGuYS3G4A6pc-KCR85cSY4MDMtoQoE_GGks4cnR3aovYnf4DPEqn4GiarpuhL6Hi6CeyRu36Yvbc7mQ-gvFKExuXsG1oK54cYiwOydqTzcVp_jzCBUN-2Y3H1wqe6DRK62jLYHxLmzrfXGaGypfr9bS187XPXsjTJsoMf-yXmYEjscaPW2gkCFbqQDiiMxAo98Wpvr3Hcqmcl3kIjHZ1C0b5W_Q2Jq2Xf6XmsSZSHGTFHJNIL_hz6uMyeXvD68_ELryzet4r5KmRjW1kWxFd1EHMkjJyeyzrefF1cWVUxm4vhZR8IcSK-yvSgnyD33Ejihw14TE5XdZGtDuh92TcR_xIooeMcm5wt94LSUvdrIf0YgpoE9oEf-FXWXUn9bTNbguEmkj8kryvyLLkBWpx3XASs0DmrjJBSbZ3jZxixjaQTO3DAbyzAjKAW3U3CEQs8xiTWeCdWTuhX7txPtweVVqmhPiCzq546bs2attQAJrCYEKZPOwQkk-CXo_9F-X6tD9LzMm7_Gg2f1r1a80lR8iu4ltj2mkCRr6vMG8Jpo5PR5KbCEcvO3YdmLxj-Zmmqytt1B1h3k"/>
+        <env name="oauth_setup_token" value="eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiIsImp0aSI6ImZmNjY5ZjRlY2Y3ZTM0OWNkMmE1YzMzZjE5MWY2NjNkZDY3NTQ1ZDgzODRjMDQ0OTViNWYxZmI4ZDExYjAzMGI3MjQzOWVkNGRiMjRhOWFjIn0.eyJhdWQiOiIxIiwianRpIjoiZmY2NjlmNGVjZjdlMzQ5Y2QyYTVjMzNmMTkxZjY2M2RkNjc1NDVkODM4NGMwNDQ5NWI1ZjFmYjhkMTFiMDMwYjcyNDM5ZWQ0ZGIyNGE5YWMiLCJpYXQiOjE0ODE4MDI5MzIsIm5iZiI6MTQ4MTgwMjkzMiwiZXhwIjo0NjM3NDc2NTMyLCJzdWIiOiIxMCIsInNjb3BlcyI6WyJzZXR1cCJdfQ.kltgbsWHSpuJoi2dWkQBQm7zhHCRmd1COPFnaVsy1zCOso5i0uGrJXYBIJchiYot9WeC8zetLAt98iEhitZPF-ucl1WrEncJCns8q4EilzLUp0oJTN_o1G5qzBIVfcM-vcHAAbixeaWpkky8wlmPNxfEWfR_jKaZzAv466EHp6U0NlDHI_ykfqMn3Js0hQim6eYJSLXnlv8NIan7HWshYSDJ2hARllqIvWMrD0hRGMwDj_GIsp1FVk7O7CVXLnmPoqTX-upp-Xv9b8uHfc2ND57hAN15kN9yO7Rqb3MwItROBcB82CtS2-JG5dnb4OE0uacxNDsJ57JL5_uCO3Vxcv8vC83icVv63yrgBrHY7cNo2LY0BTiJPClMNGndztBnRkhv6P3Q-aqBy5z-7cs5VnGcJxF2RMcFKJ0gequNmfhNJxFDYUA4U7n7upTI7LzZWpF6slXochPhG5uETNBVqlgUh8P4YY5k4ljmSiOPxmNc6gn4AvsOKvTrKIKMufAj0ABPAwE9o0_J2ao5Ts2d6i1mrRwB-7P9sWldbouEAipw_u96LFIslwig7R5IbZhYrZmdeIupcR8JAR1RnXWGLjYHk8aEzE5gHm-CgUW1-sZEk6XOQe7n_xoTyN3zwEroDtYmaIbObZqeC2ShPffa-rUUJO8_tNgkohk5uxinVgA"/>
+        <env name="oauth_setup_revoked_token" value="eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiIsImp0aSI6IjkyNzlhMzExMDM1OWI1MjhkNjc1YmU4MmFlYWE2ZTk2ZGQ2OGYyZjkwNjU3MDVhMTkyNzJiY2M5ODFlZjgzNjdmZjNhN2E1MGFlZTNhY2RjIn0.eyJhdWQiOiIxIiwianRpIjoiOTI3OWEzMTEwMzU5YjUyOGQ2NzViZTgyYWVhYTZlOTZkZDY4ZjJmOTA2NTcwNWExOTI3MmJjYzk4MWVmODM2N2ZmM2E3YTUwYWVlM2FjZGMiLCJpYXQiOjE0ODE4MDk2ODQsIm5iZiI6MTQ4MTgwOTY4NCwiZXhwIjo0NjM3NDgzMjg0LCJzdWIiOiIxMCIsInNjb3BlcyI6WyJzZXR1cCJdfQ.ihMpN3xQUAzkIz4UMwC2DlxFDy5oQainyQymRB8l6k9xebYDm_BmV-yxML1-M_4zDPDeL_6PEtYqsA1YGJ5N9cxGnF3xM2rMDLmxxDm_aaNWTCRBNe8aJ2mOjCRBR2NiOkZq585zf2YbTbJqpIIEBHZ3FR1UhnNEJy3cqAzB865S705DTx26_vc6aCjTtDAF6lzB_jT-2tw2RVW10bfnh_zRD2gE7nwWGEbuIE3G_FNkmcihQRDv4IDhwfpNKul4uE9jpWDwIJ1Eec6GZvV261mKO1wvwGUTpdCG60ByfkbQCVgOREZ5qDb3hAYzd1a8xOVfdlUk6PcWszkbVdo1JNi1FSUEcAoJHLcK6E4dwZz2GWdLRobZ8ZBY8prqh0rIkQ4dQKPZ0dejKHgc08PzmCtJz1Y7bzyt575u_Ix-s2ciN6XN0Bbr2zA5ngyYnxrqhxcFJ-PkRQhQi6pTnDzrKxrTTxhYdDdyzYvattJ_sw7c5IyhYaEyym3X6LZ0ZHJCgUldcR5Cjt9rMZ5nYJbkx7nF24AFfs2ibNNRBfaMl5kfKKKKSvRdWvWH4iuvUyq__HN7wail8wj2xc650xDyViIh-j4isugMRukVnLJ0CTmyg4HMgaCMWCW9-NWl1prt_vjig3KWohHetFsYjnmpjLy1hk1-c_mrsWcOVdHg0vg"/>
+    </php>
+</phpunit>

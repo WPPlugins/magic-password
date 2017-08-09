@@ -1,0 +1,124 @@
+{% extends "dashboard/settings/settings.html.twig" %}
+
+{% block content %}
+    <h1 class="text-center"><strong>Configuration:</strong></h1>
+
+    <div class="content">
+        <div class="mf-step">
+            <div class="mf-step-left">
+                <div class="qr-code-wrapper">
+                    {% include 'dashboard/settings/pair-form.html.twig' %}
+
+                    <img src="{{ assets_url }}images/qr-placeholder.png" alt="Magic Code Placeholder" class="qr-code-placeholder">
+                    <img src="{{ qr_code }}" alt="Magic Code" class="qr-code-hide" />
+                </div>
+            </div>
+            <div class="mf-step-right">
+                <div class="mf-step-right-content">
+                    <h4>Pair another device with this plugin</h4>
+                    <p class="step-desc">Scan Magic Code with your Magic Password app<br>to connect another device</p>
+                    <button class="mf-btn show-qr js-show-qr">SHOW MAGIC CODE</button>
+                </div>
+
+                <div class="mf-step-right-bottom">
+                    <a href="#" class="scanning-tips js-open-tips">
+                        <i class="icon icon-scanning-tips"></i>
+                        <span>HOW DO I SCAN A MAGIC CODE?</span>
+                    </a>
+                </div>
+            </div>
+        </div>
+
+        <div class="mf-option">
+            <h5>Make Magic Password the only authentication option:</h5>
+            <form action="{{ url.make('update-settings') }}" method="post">
+                {{ url.make_form_nonce('update-settings') | raw }}
+                <div class="radio-input-box">
+                    <input type="radio" id="mf-only-no" name="mf-only" value="no" {% if false == is_mpwd_only_auth_option %}checked="checked"{% endif %} />
+                    <label for="mf-only-no">
+                        <span class="label-left">
+                            <span class="unchecked">
+                                <i class="icon icon-radio-unchecked"></i>
+                            </span>
+                            <span class="checked">
+                                <i class="icon icon-radio-checked"></i>
+                            </span>
+                        </span>
+                        <span class="label-right" id="disable-passwordless-only">
+                            <span class="input-desc">
+                                <strong>No</strong>
+                                <br />
+                                You can log in with Magic Password or with standard login and password.
+                            </span>
+                        </span>
+                    </label>
+                </div>
+                <div class="radio-input-box">
+                    <input type="radio" id="mf-only-yes" name="mf-only" value="yes" {% if true == is_mpwd_only_auth_option %}checked="checked"{% endif %} />
+                    <label for="mf-only-yes">
+                        <span class="label-left">
+                            <span class="unchecked">
+                                <i class="icon icon-radio-unchecked"></i>
+                            </span>
+                            <span class="checked">
+                                <i class="icon icon-radio-checked"></i>
+                            </span>
+                        </span>
+                        <span class="label-right" id="enable-passwordless-only">
+                            <span class="input-desc">
+                                <strong>Yes</strong>(recommended)
+                                <br />
+                                You can log in only with Magic Password. Standard login and password are disabled for your account.
+                                <br />
+                                Please be careful with this option and make sure you have a backup device with Magic Password installed.
+                            </span>
+                        </span>
+                    </label>
+                </div>
+                <input type="submit" value="Save" style="display: none;" class="mf-btn enable save js-show-on-change" />
+            </form>
+        </div>
+    </div>
+
+    <div class="mf-modal-backdrop delete-modal">
+        <div class="mf-modal-backdrop-content">
+            <div class="mf-modal" tabindex="-1">
+                <div class="mf-modal-content text-center">
+                    <i class="icon icon-delete-exclamation-mark"></i>
+                    <h6>Delete configuration?</h6>
+                    <p class="info-paragraph">You will not be able to log in with your Magic Password app until you set up new configuration</p>
+
+                    <div class="confirm-buttons">
+                        <a href="{{ url.make_with_nonce('unpair') | raw }}" class="mf-btn delete">Delete</a>
+                        <a href="#" class="js-close-modal">Cancel</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="mf-modal-backdrop success-modal">
+        <div class="mf-modal-backdrop-content">
+            <div class="mf-modal" tabindex="-1">
+                <div class="mf-modal-content text-center">
+                    <i class="icon icon-tick"></i>
+                    <h6>Success!</h6>
+                    <p class="info-paragraph">Your smartphone has been paired with this WordPress account</p>
+                    <input type="button" class="js-success-modal-continue mf-btn action" value="Continue" />
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="mf-delete-bar-container">
+        <div class="mf-delete-bar">
+            <a href="#" class="js-delete-config">
+                <i class="icon icon-delete"></i>
+                <span>Click here to delete your configuration and set up a new one</span>
+            </a>
+        </div>
+    </div>
+
+    {% include 'subscription-error-modal.html.twig' %}
+    {% include 'dashboard/pair-error-modal.html.twig' %}
+{% endblock %}

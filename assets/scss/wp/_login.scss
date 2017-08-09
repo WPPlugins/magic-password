@@ -1,0 +1,103 @@
+@import '../includes/variables';
+
+.login {
+  #login {
+    &.with-qr {
+      p {
+        &#nav {
+          display: none;
+        }
+      }
+
+      form {
+        padding: 24px;
+
+        p {
+          display: none;
+        }
+
+        .tip {
+          display: block;
+        }
+
+        .qr-code-wrapper {
+          display: block !important;
+        }
+
+        .login-button {
+          display: none;
+        }
+
+        .normal-login {
+          display: block;
+        }
+
+        .mf-modal-backdrop {
+          p {
+            display: inherit;
+          }
+        }
+      }
+    }
+
+    form {
+      @import '../includes/spinner';
+
+      position: relative;
+      overflow: visible;
+      margin-bottom: 70px;
+
+      .login-button-wrapper {
+        position: relative;
+        width: 100%;
+
+        .qr-code-wrapper {
+          position: static;
+          text-align: center;
+          display: none;
+
+          > * {
+            position: static;
+          }
+
+          img {
+            display: block;
+            width: 100%;
+            height: auto;
+            image-rendering: pixelated;
+
+            &.loading {
+              display: none;
+            }
+          }
+
+          .sk-circle {
+            display: none;
+
+            &.loading {
+              display: block;
+            }
+          }
+        }
+
+        .pos-r {
+          position: relative;
+          margin: 0 -24px;
+        }
+
+        h3 {
+          font-weight: 400;
+          font-size: 15px;
+          margin-bottom: 20px;
+        }
+      }
+
+      .tip {
+        display: none;
+        position: absolute;
+        top: -14px;
+        right: -14.5px;
+      }
+    }
+  }
+}

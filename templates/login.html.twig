@@ -1,0 +1,42 @@
+<div class="tip">
+    <a href="#" class="js-open-tips">
+        <i class="icon icon-scanning-tips-login"></i>
+    </a>
+</div>
+
+<div class="login-button-wrapper mf-login">
+    <div class="qr-code-wrapper anim-on">
+        <h3 class="text-center">Scan Magic Code with Magic Password<br>app to authenticate</h3>
+        <img src="{{ qr_code }}" alt="QR code" />
+
+        <div class="sk-circle">
+            <div class="sk-circle1 sk-child"></div>
+            <div class="sk-circle2 sk-child"></div>
+            <div class="sk-circle3 sk-child"></div>
+            <div class="sk-circle4 sk-child"></div>
+            <div class="sk-circle5 sk-child"></div>
+            <div class="sk-circle6 sk-child"></div>
+            <div class="sk-circle7 sk-child"></div>
+            <div class="sk-circle8 sk-child"></div>
+            <div class="sk-circle9 sk-child"></div>
+            <div class="sk-circle10 sk-child"></div>
+            <div class="sk-circle11 sk-child"></div>
+            <div class="sk-circle12 sk-child"></div>
+        </div>
+
+        <input type="hidden" name="session_id"          id="session-id"          value="{{ session_id }}" />
+        <input type="hidden" name="integration_id"      id="integration-id"      value="{{ integration_id }}" />
+        <input type="hidden" name="integration_user_id" id="integration-user-id" value="0" />
+        <input type="hidden" name="totp_code"           id="totp-code"           value="0" />
+        <input type="hidden" name="channel_name"        id="channel-name"        value="" />
+        <input type="hidden" name="status_id"           id="status-id"           value="" />
+        <input type="hidden" name="login_cookie"        id="login-cookie"        value="{{ login_cookie }}" />
+    </div>
+    <div class="pos-r">
+        <button type="button" class="mf-btn login normal-login">Authenticate with login and password</button>
+        <button type="button" class="mf-btn login login-button">Log in with Magic Password</button>
+    </div>
+</div>
+
+{% include 'subscription-error-modal.html.twig' %}
+{% include 'dashboard/tips.html.twig' %}

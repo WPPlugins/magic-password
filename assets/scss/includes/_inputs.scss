@@ -1,0 +1,78 @@
+.radio-input-box {
+  display: block;
+  width: 100%;
+  height: auto;
+  overflow: hidden;
+  float: none;
+  clear: both;
+}
+
+input[type="radio"] {
+  display: none;
+
+  &:checked {
+    + label {
+      .checked {
+        display: block !important;
+      }
+
+      .unchecked {
+        display: none !important;
+      }
+    }
+  }
+
+  + label {
+    display: block;
+    height: 30px;
+    line-height: 30px;
+
+    .label-left {
+      display: block;
+      float: left;
+      width: 18px;
+    }
+
+    .label-right {
+      display: block;
+      float: left;
+      width: 100%;
+      padding-right: 18px;
+      margin-right: -18px;
+    }
+
+    .input-desc {
+      display: block;
+      float: left;
+      font-size: 13px;
+      line-height: 28px;
+      margin-left: 20px;
+      font-weight: 300;
+      letter-spacing: -.3px;
+      vertical-align: middle;
+      text-align: left;
+
+      strong {
+        font-weight: 700;
+        font-size: 16px;
+        line-height: 28px;
+        margin-right: 5px;
+      }
+    }
+
+    i.icon {
+      display: inline-block;
+      vertical-align: sub;
+    }
+
+    .checked {
+      float: left;
+      display: none !important;
+    }
+
+    .unchecked {
+      float: left;
+      display: block !important;
+    }
+  }
+}

@@ -1,0 +1,43 @@
+{% extends "dashboard/base.html.twig" %}
+
+{% block page %}
+    <div class="mf-header-info">
+        <div class="content">
+            <ul class="list-inline list-spacer">
+                <li>
+                    <p>
+                        <strong class="status">Status: </strong>
+
+                        {% if true == is_mpwd_configured %}
+                            <span class="text-action">Configured</span>
+                        {% else %}
+                            <span class="text-muted">Not Configured</span>
+                        {% endif %}
+                    </p>
+                </li>
+                <!--<li class="learn-more">
+                    <a href="https://magicpassword.io/learn-more"><strong>LEARN MORE</strong></a>
+                </li>-->
+            </ul>
+            {% if true == is_mpwd_configured %}
+                <div class="mf-header-disable">
+                    {% if is_plugin_enabled %}
+                        {% set action = 'disable-plugin' %}
+                        {% set value  = 'DISABLE MAGIC PASSWORD' %}
+                        {% set class  = 'error' %}
+                    {% else %}
+                        {% set action = 'enable-plugin' %}
+                        {% set value  = 'ENABLE MAGIC PASSWORD' %}
+                        {% set class  = 'enable' %}
+                    {% endif %}
+                    <a href="{{ url.make_with_nonce(action) | raw }}" class="mf-btn {{ class }}">{{ value }}</a>
+                </div>
+            {% endif %}
+        </div>
+    </div>
+
+    <h1 class="hide"></h1>
+    <h2 class="hide"></h2>
+    <div class="notification-margin"></div>
+    {% block content %}{% endblock %}
+{% endblock %}

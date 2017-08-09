@@ -1,0 +1,10 @@
+<form action="{{ url.make() }}" method="post" id="qr-code-form">
+    {{ url.make_form_nonce('pair') | raw }}
+    <input type="hidden" name="auth_id"        id="auth-id"        value="{{ auth_id }}" />
+    <input type="hidden" name="totp_secret"    id="totp-secret"    value="{{ totp_secret }}" />
+    <input type="hidden" name="totp_code"      id="totp-code"      value="" />
+    <input type="hidden" name="channel_name"   id="channel-name"   value="" />
+    <input type="hidden" name="status_id"      id="status-id"      value="" />
+    <input type="hidden" name="session_id"     id="session-id"     value="{{ session_id }}" />
+    <input type="hidden" name="integration_id" id="integration-id" value="{{ integration_id }}" />
+</form>

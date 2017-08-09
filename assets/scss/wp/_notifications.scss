@@ -1,0 +1,19 @@
+@import '../includes/variables';
+
+.mf-wrap {
+  .notice {
+    border-radius: 3px;
+    box-shadow: none;
+
+    &.notice-error {
+      border-left-color: $MF_Delete_BackgroundColor;
+    }
+
+    p {
+      font-size: 12px;
+      letter-spacing: .25px;
+      font-weight: 400;
+      color: $MF_FontColor;
+    }
+  }
+}
